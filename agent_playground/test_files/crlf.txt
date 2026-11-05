@@ -1,0 +1,4 @@
+This file uses Windows (CRLF) line endings.
+Line two.
+Change me: original text.
+Last line.

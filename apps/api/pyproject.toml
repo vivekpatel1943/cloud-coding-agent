@@ -1,0 +1,27 @@
+[project]
+name = "api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "common",
+    "fastapi[standard]>=0.143.3",
+]
+
+# the below simply tells python the package 
+# common is present in the workspace so it  
+# has to be imported from inside the 
+# workspace , python does not need to look 
+# on the internet for it , 
+
+[tool.uv.sources]
+common = { workspace = true }
+
+# it simply tells python which packaging 
+# tools (hatchling) need to be installed , 
+# if you compile the folder into an  
+# installable .whl(wheel) file 
+
+[tool.uv]
+package=false

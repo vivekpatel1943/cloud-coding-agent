@@ -1,0 +1,26 @@
+[project]
+name = "worker"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "common",
+    "e2b-code-interpreter>=2.11.0",
+    "google-genai>=2.31.0",
+    "pygithub>=2.10.0",
+]
+
+[tool.uv.sources]
+common = { workspace = true }
+
+[tool.uv]
+package=false
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
